@@ -1,0 +1,64 @@
+@import "../abstracts/";
+
+.theme-menu {
+  position: fixed;
+  right: -30rem;
+  top: 0;
+  width: 30rem;
+  height: 100vh;
+  padding: 2rem;
+  z-index: 99;
+  background-color: var(--main-bg);
+  box-shadow: var(--box-shadow);
+  transition: right 0.5s var(--transition-cubic);
+
+  &.active {
+    right: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.7rem;
+    right: 2rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+  }
+
+  &__select {
+    margin-top: 4rem;
+  }
+}
+
+.mode-list {
+  margin-top: 2rem;
+  li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__color {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+
+    i {
+      transform: scale(0);
+      transition: transform 0.5s var(--transition-cubic);
+    }
+    &.active {
+      i {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.mode-list > li ~ li {
+  margin-top: 1rem;
+}

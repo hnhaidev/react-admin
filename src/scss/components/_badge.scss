@@ -1,0 +1,21 @@
+@import "../abstracts/";
+
+.badge {
+  padding: 0.6rem 1.1rem;
+  color: var(--txt-white);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+
+  &-danger {
+    background-color: var(--main-color-red);
+  }
+  &-success {
+    background-color: var(--main-color-green);
+  }
+  &-primary {
+    background-color: var(--main-color-blue);
+  }
+  &-warning {
+    background-color: var(--main-color-orange);
+  }
+}
